@@ -1,0 +1,23 @@
+server:
+  port: 8282
+
+spring:
+  application:
+    name: service-feign
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://@eureka-hostname@:@eureka-port@/eureka/,http://localhost2:2001/eureka/
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+feign:
+  hystrix:
+    enabled: true
