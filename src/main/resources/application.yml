@@ -1,5 +1,7 @@
 server:
   port: 8282
+  tomcat:
+    uri-encoding: UTF-8
 
 spring:
   application:
@@ -10,6 +12,12 @@ spring:
     username: root
     password: 123456
     virtual-host: my_vhost
+  http:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+      force-response: true
 
 eureka:
   instance:

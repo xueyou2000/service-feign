@@ -21,7 +21,7 @@ public class HelloController {
         this.clientFeign = clientFeign;
     }
 
-    @ApiOperation(value = "feign-consumer", notes = "测试feign消费", httpMethod = "GET", produces = "application/json")
+    @ApiOperation(value = "feign-consumer", notes = "测试feign消费", httpMethod = "GET")
     @GetMapping("/feign-consumer")
     public String consumer() {
         User user = new User();
@@ -36,7 +36,7 @@ public class HelloController {
         return sb.toString();
     }
 
-    @ApiOperation(value = "test-load-balance", notes = "测试负载均衡", httpMethod = "GET", produces = "application/json")
+    @ApiOperation(value = "test-load-balance", notes = "测试负载均衡", httpMethod = "GET")
     @GetMapping("/test-load-balance")
     public String testLoadBalance() {
         return clientFeign.loadBalanced();
