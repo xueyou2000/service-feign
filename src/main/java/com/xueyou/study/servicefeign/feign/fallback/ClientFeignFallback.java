@@ -28,4 +28,9 @@ public class ClientFeignFallback implements ClientFeign {
     public String hello(User user) {
         return "========erro 服务降级=======";
     }
+
+    @Override
+    public String loadBalanced() {
+        return "测试负载均衡-服务降级";
+    }
 }
