@@ -1,7 +1,6 @@
 package com.xueyou.study.servicefeign.feign.fallback;
 
 import com.xueyou.study.serviceApi.models.dto.User;
-import com.xueyou.study.serviceApi.service.UserService;
 import com.xueyou.study.servicefeign.feign.ClientFeign;
 import org.springframework.stereotype.Component;
 

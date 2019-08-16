@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  * 创建 by xueyo on 2019/8/14
  */
 @Configuration
-@ConditionalOnClass({ Feign.class })
+@ConditionalOnClass({Feign.class})
 public class FeignConfiguration {
 
     @Bean
