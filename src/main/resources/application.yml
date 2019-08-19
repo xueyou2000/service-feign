@@ -7,7 +7,7 @@ spring:
   application:
     name: service-feign
   rabbitmq:
-    host: 172.31.143.154
+    host: 172.23.160.148
     port: 5672
     username: root
     password: 123456
@@ -26,6 +26,15 @@ eureka:
     service-url:
       defaultZone: http://@eureka-hostname@:@eureka-port@/eureka/,http://localhost2:2001/eureka/
 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
 hystrix:
   command:
